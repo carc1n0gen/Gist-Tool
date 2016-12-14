@@ -15,6 +15,8 @@ Command                                           | Explanation
 ------------------------------------------------- | -------------------------------------------------------------------------
 `cat <file> | gist.py`                            | Generate a gist with a name and description set to the current date/time.
 `cat <file> | gist.py -n <name> -d <description>` | Generate a gist with a custom file name and description
+`cat <file> | gist.py -p`                         | Generate a gist and flag it as private
+
 
 ## Security Considerations
 
