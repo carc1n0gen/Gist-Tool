@@ -80,11 +80,19 @@ if options.description:
 
 if options.filename:
 	filename = options.filename
-	
 
-API_URL=getenv("GH_API_URL") + "/gists"
+
+API_ROOT=getenv("GH_API_URL")
 API_USER=getenv("GH_USERNAME")
 API_TOKEN=getenv("GH_GIST_TOKEN")
+
+if not API_ROOT or not API_USER or not API_TOKEN:
+	print "Required environment variables do not exist."
+	print "See https://github.com/carc1n0gen/Gist-Tool for example configuration."
+	exit(1)
+
+API_URL=API_ROOT + "/gists"
+
 TEXT=""
 
 for line in stdin:
