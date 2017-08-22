@@ -114,7 +114,7 @@ headers={
 	"Authorization": "Basic %s" % base64string,
 	"Accept": "application/vnd.github.v3+json"
 }
-request = urllib2.Request(API_URL, data, headers={"Content-Type": "application/json", "Authorization": "Basic %s" % base64string})
+request = urllib2.Request(API_URL, data, headers=headers)
 
 try:
 	f = urllib2.urlopen(request)
