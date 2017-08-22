@@ -109,6 +109,11 @@ data = json.dumps({
 })
 
 base64string = base64.b64encode("%s:%s" % (API_USER, API_TOKEN))
+headers={
+	"Content-Type": "application/json",
+	"Authorization": "Basic %s" % base64string,
+	"Accept": "application/vnd.github.v3+json"
+}
 request = urllib2.Request(API_URL, data, headers={"Content-Type": "application/json", "Authorization": "Basic %s" % base64string})
 
 try:
