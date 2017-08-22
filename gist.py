@@ -28,7 +28,7 @@ README
 Three environment variables are required for this script to work
 
 GH_API_URL:
-	The url to the github api, example: https://api.github.com/v3.  Or your
+	The url to the github api, example: https://api.github.com.  Or your
 	on-prem github, example: https://github.example.com/api/v3
 
 GH_USERNAME:
